@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Technical Documentation Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-glow glow-one"></div>
+    <div class="bg-glow glow-two"></div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+            <span>DOCU<span class="purple">AI</span></span>
+        </div>
+
+        <div class="badge">
+            ● AI POWERED
+        </div>
+
+        <h1>
+            Technical Documentation
+            <span>Generator</span>
+        </h1>
+
+        <p>
+            Transform your source code into professional,
+            structured technical documentation.
+        </p>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="container">
+
+        <!-- LEFT PANEL -->
+        <section class="card input-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h2>Project Information</h2>
+
+                    <p>
+                        Provide your project details and source code.
+                    </p>
+                </div>
+
+                <button class="demo-btn" onclick="loadDemo()">
+                    ⚡ Demo
+                </button>
+
+            </div>
+
+
+            <!-- Project Name -->
+            <label for="projectName">
+                Project Name
+            </label>
+
+            <input
+                type="text"
+                id="projectName"
+                placeholder="e.g. Student Management System"
+            >
+
+
+            <!-- Technology -->
+            <label for="techStack">
+                Technology Stack
+            </label>
+
+            <input
+                type="text"
+                id="techStack"
+                placeholder="e.g. Java, MySQL, JDBC"
+            >
+
+
+            <!-- Description -->
+            <label for="description">
+                Project Description
+            </label>
+
+            <textarea
+                id="description"
+                placeholder="Describe what your project does..."
+            ></textarea>
+
+
+            <!-- Source Code -->
+            <label for="sourceCode">
+                Source Code / README
+            </label>
+
+            <textarea
+                id="sourceCode"
+                class="code-input"
+                placeholder="Paste your source code or README here..."
+            ></textarea>
+
+
+            <!-- Generate -->
+            <button
+                class="generate-btn"
+                onclick="generateDocumentation()"
+            >
+                <span>✦</span>
+                Generate Documentation
+            </button>
+
+
+            <!-- Status -->
+            <div id="statusBox" class="status-box hidden">
+
+                <div class="spinner"></div>
+
+                <div>
+                    <strong id="statusTitle">
+                        AI is analyzing...
+                    </strong>
+
+                    <small id="statusText">
+                        Reading project source code
+                    </small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RIGHT PANEL -->
+        <section class="card output-card">
+
+            <div class="output-heading">
+
+                <div>
+                    <h2>
+                        <span class="document-icon">▤</span>
+                        Generated Documentation
+                    </h2>
+
+                    <p>
+                        AI-generated technical documentation
+                    </p>
+                </div>
+
+
+                <div class="actions">
+
+                    <button
+                        class="action-btn"
+                        onclick="copyDocumentation()"
+                    >
+                        ⧉ Copy
+                    </button>
+
+                    <button
+                        class="action-btn"
+                        onclick="downloadDoc()"
+                    >
+                        ↓ Export
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Output -->
+            <div id="output" class="output">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Your documentation will appear here
+                    </h3>
+
+                    <p>
+                        Enter your project information and source code,
+                        then click Generate Documentation.
+                    </p>
+
+                    <div class="feature-list">
+
+                        <span>✓ Architecture</span>
+                        <span>✓ Modules</span>
+                        <span>✓ Database</span>
+                        <span>✓ API</span>
+                        <span>✓ Testing</span>
+                        <span>✓ Deployment</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <span>
+            Built with AI
+        </span>
+
+        <span>•</span>
+
+        <span>
+            Technical Documentation Engine
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
